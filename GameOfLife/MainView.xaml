@@ -1,0 +1,72 @@
+﻿<Window x:Class="GameOfLofeMVVM.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameOfLife"
+        mc:Ignorable="d"
+        Title="GameOfLife" Height="450" Width="500">
+    
+    <Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>
+    
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="3" />
+            <Setter Property="MinWidth" Value="100" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Menu>
+            <MenuItem Header="Файл">
+                <MenuItem Header="Новое поле" Name="NewEmptyField" Command="{Binding NewEmptyFieldCommand}" />
+                <MenuItem Header="Растановка">
+                    <MenuItem Header="Открыть" Name="OpenField"  Command="{Binding OpenFieldCommand}"  />
+                    <MenuItem Header="Сохранить" Name="SaveField"  Command="{Binding SaveFieldCommand}" />
+                    <MenuItem Header="Уалить" Name="DelField"  Command="{Binding DelFieldCommand}"  />
+                    <MenuItem Header="Загрузить случайную" Name="LoadRandField"  Command="{Binding LoadRandFieldCommand}"  />
+                    <MenuItem Header="Заполнить случайно" Name="FieldRand"  Command="{Binding FieldRandCommand}" />
+                </MenuItem>
+                <MenuItem Header="Сохранения">
+                    <MenuItem Header="Открыть" Name="OpenSave"  Command="{Binding OpenSaveCommand}"  />
+                    <MenuItem Header="Сохранить" Name="SaveSave"  Command="{Binding SaveSaveCommand}" />
+                    <MenuItem Header="Уалить" Name="DelSave"  Command="{Binding DelSaveCommand}"  />
+                </MenuItem>
+                <MenuItem Header="Просмотр истории" Name="log"  Command="{Binding LogCommand}"/>
+                <Separator />
+                <MenuItem Header="Выход" Name="Exit"  Command="{Binding ExitCommand}"/>
+            </MenuItem>
+            <MenuItem Header="Игра">
+                <MenuItem Header="{Binding StartStopTite, UpdateSourceTrigger=PropertyChanged}" Command="{Binding StartStopCommand}" />
+                <MenuItem Header="Тип вселенной"  >
+                    <RadioButton Content="Ограниченная" Name="RB1"/>
+                    <RadioButton Content="Замкнутая" Name="RB2" IsChecked="{Binding closedWord}"/>
+                </MenuItem>
+
+            </MenuItem>
+        </Menu>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Grid.Row="1">
+            <Grid Margin="2,2,2,2">
+                <ContentControl Name="ContentControlPanel" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="{Binding contentControl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            </Grid>
+        </ScrollViewer>
+
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Grid.Row="2">
+            <Button Name="StartStop" Content="{Binding StartStopTite, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Command="{Binding StartStopCommand}"/>
+            <TextBlock Name="textGen" VerticalAlignment="Center" Margin="3,0" Text="{Binding TextGeneration, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                Поколение: 0
+            </TextBlock>
+        </StackPanel>
+
+    </Grid>
+</Window>

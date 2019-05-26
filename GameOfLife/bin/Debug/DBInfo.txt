@@ -1,0 +1,7 @@
+﻿DESKTOP-AI8VOIA\SQLEXPRESS
+GameOfLifeDb
+root
+123
+
+Порядок запили данных для подключения к базе данных
+1-DataSource 2-Catalog 3-User 4-Password

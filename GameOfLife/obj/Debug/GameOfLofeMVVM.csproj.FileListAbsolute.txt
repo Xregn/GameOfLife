@@ -1,0 +1,15 @@
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\bin\Debug\GameOfLofeMVVM.exe
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\bin\Debug\GameOfLofeMVVM.pdb
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\MainView.g.cs
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\App.g.cs
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\GameOfLofeMVVM_MarkupCompile.cache
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\GameOfLofeMVVM_MarkupCompile.lref
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\MainView.baml
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\GameOfLofeMVVM.g.resources
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\GameOfLofeMVVM.Properties.Resources.resources
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\GameOfLofeMVVM.csproj.GenerateResource.cache
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\GameOfLofeMVVM.csproj.CoreCompileInputs.cache
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\GameOfLofeMVVM.exe
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\GameOfLofeMVVM.pdb
+D:\C#\GameOfLofeMVVM\GameOfLofeMVVM\obj\Debug\GameOfLofeMVVM.csprojAssemblyReference.cache
