@@ -83,6 +83,8 @@ namespace GameOfLife
             OpenSaveCommand = new DelegateCommand(OpenSave);
             SaveSaveCommand = new DelegateCommand(SaveSave);
             DelSaveCommand = new DelegateCommand(DelSave);
+            object startObject = new object();
+            NewEmptyField(startObject);
         }
 
         #region DelegateCommand
